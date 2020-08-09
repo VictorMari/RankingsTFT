@@ -1,0 +1,8 @@
+{
+    "TFT":{
+        "Leagues":{
+            "url": "https://euw1.api.riotgames.com/tft/league/v1/entries/by-summoner/:id",
+            "method": "GET"
+        }
+    }
+}
