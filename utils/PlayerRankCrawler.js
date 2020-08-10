@@ -74,12 +74,11 @@ const crawlPlayerRankings = async () => {
 
 module.exports.getRankings = crawlPlayerRankings
 
-/*
 crawlPlayerRankings()
     .then(e => console.log(JSON.stringify(e, null, 2)))
     .catch(e => console.log(e))
-*/
-/*
+
+    /*
 getPlayerRanking(players[2])
     .then(e => console.log(e))
     .catch(e => console.log(e))

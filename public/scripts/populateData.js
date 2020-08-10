@@ -1,11 +1,3 @@
-/**
- * $.ajax({
-    url: "file://../../data/summoners.js",
-    method: "GET",
-    error: e => console.log(e)
-}).then(e => console.log(e))
- */
-
 let generateHtmlTable = rankings => {
     let rankingListElement = document.createElement("ol")
     let rankingsTFT = rankings
