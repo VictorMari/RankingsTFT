@@ -138,6 +138,20 @@ Leaderboard
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
 }
 
+.leaderboard ol li:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.leaderboard ol li:last-child::after {
+  box-shadow: 0 -2.5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 0 0 10px 10px;
+}
+.leaderboard ol li:last-child mark::before, .leaderboard ol li:last-child mark::after {
+  top: -9px;
+  bottom: auto;
+  border-top: none;
+  border-bottom: 8px solid #993639;
+}
+
 .leaderboard ol li:hover {
   z-index: 2;
   overflow: visible;

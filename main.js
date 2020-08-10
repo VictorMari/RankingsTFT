@@ -1,4 +1,7 @@
 const { app, BrowserWindow } = require('electron')
+const crawler = require('./utils/playerRankCrawler')
+const fs = require('fs').promises
+
 
 function createWindow () {
   // Crea la ventana del navegador.
@@ -10,8 +13,13 @@ function createWindow () {
     }
   })
 
-  // y carga el index.html de la aplicación.
-  win.loadFile('./public/views/index.html')
+
+  crawler
+    .getRankings()
+    .then(rankings => JSON.stringify(rankings, null ,2))
+    .then(jsonData => fs.writeFile(`./data/rankings.json`, jsonData))
+    .catch(err => console.log(err))
+    .then(data => win.loadFile('./public/views/index.html'))
 
   // Abre las herramientas de desarrollo (DevTools).
   //win.webContents.openDevTools()
